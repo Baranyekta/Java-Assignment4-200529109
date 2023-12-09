@@ -2,6 +2,7 @@
 const search = document.querySelector(".searchInput");
 const submitButton = document.querySelector("#submitButton");
 const tableBody = document.querySelector("#tableBody");
+const myInfo = document.querySelector("#myInfo");
 
 // create our base url and the api key
 const baseURL = 'https://lamp.computerstudi.es/~PriyanshPriyansh001/java/week14/posts.json';
@@ -9,6 +10,11 @@ const apiKey =  "200529109";
 
 // proxy URL to access info from the lamp.compuerstudie.es website (i downloaded node and all of the required tools in order to access the info)
 const proxyURL = 'http://localhost:3000/proxy'; // my localhost
+
+// Student information
+const myID = "200529109";
+const myName = "Baran Akhavan-Yekta";
+
 
 // generate complete url and do a fetch request
 function fetchDataFromJson() {
@@ -27,6 +33,9 @@ function fetchDataFromJson() {
 // a function to display data to page
 function displayData(json) {
     console.log(json);
+
+    // display student info dynamically
+    myInfo.textContent = `Student ID: ${myID} | Student Name: ${myName}`;
 
     const storyData = json.posts;
 
