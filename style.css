@@ -3,3 +3,13 @@
     width: 30px; /* Adjust the size as needed */
     height: 30px; /* Adjust the size as needed */
 }
+
+/* added green to match the green theme */
+h1 {
+    color: #28a745;
+}
+
+.input-group-text {
+    background-color: #28a745;
+    color: white; /* added white text */
+}
